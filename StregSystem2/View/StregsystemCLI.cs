@@ -76,48 +76,81 @@ namespace StregSystem2.View
 
         public void Start()
         {
-            _stregsystem.LoadProductData("products.csv");
-            _stregsystem.LoadUserData("users.csv");
-            Console.WriteLine("Stregsystem CLI started!");
-            Console.WriteLine("Available products:");
-
+            Console.WriteLine("Loading users and products data...");
+            _stregsystem.LoadUserData("userdata.csv");
+            _stregsystem.LoadProductData("productdata.csv");
+            Console.WriteLine("Data loaded successfully.");
             var users = _stregsystem.GetUsers(u => u.Balance >= 0);
 
-            foreach (var user in users)
+            foreach (var u in users)
             {
-                Console.WriteLine("{0} - {1} - {2}", user.Id, user.UserName, user.FirstName);
+                Console.WriteLine("{0} - {1} - {2}", u.Id, u.UserName, u.FirstName);
                 
             }
             
-            var activeProducts = _stregsystem.ActiveProducts.Where(p => p.Active);
-            foreach (var product in activeProducts)
+            Console.WriteLine("Please enter your username: ");
+            var username = Console.ReadLine();
+            var user = _stregsystem.GetUserByUserName(username);
+
+            if (user == null)
             {
-                Console.WriteLine("{0} - {1} - {2}", product.Id, product.Name, product.Price);
+                DisplayUserNotFound(username);
+                return;
             }
-            Console.WriteLine(
-                "Enter quickbuy command (e.g. 'quickbuy 1 2') to buy a product, or 'exit' to exit the program.");
+
+            DisplayUserInfo(user);
+
             while (true)
             {
-                Console.Write("> ");
-                var command = Console.ReadLine();
-                
-                if (command.ToLower() == "exit")
+                Console.WriteLine("Stregsystem CLI started!");
+                Console.WriteLine("Available products:");
+
+                var activeProducts = _stregsystem.ActiveProducts.Where(p => p.Active);
+                foreach (var products in activeProducts)
+                {
+                    Console.WriteLine("{0} - {1} - {2}", products.Id, products.Name, products.Price);
+                }
+
+                Console.WriteLine("Enter the product id you want to buy or type 'quit' to exit: ");
+                var input = Console.ReadLine();
+
+                if (input.ToLower() == "quit")
                 {
                     break;
                 }
 
-                if (command.ToLower() == "1")
+                int productId;
+                if (!int.TryParse(input, out productId))
                 {
-
-                }
-                
-                if (command.ToLower() == "2")
-                {
+                    DisplayGeneralError("Invalid product id.");
+                    continue;
                 }
 
-                var args = command.Split(' ');
+                var product = _stregsystem.GetProductById(productId);
+                if (product == null)
+                {
+                    DisplayProductNotFound(input);
+                    continue;
+                }
+
+                if (!product.Active)
+                {
+                    Console.WriteLine("Product is inactive.");
+                    continue;
+                }
+
+                var buyTransaction = _stregsystem.BuyProduct(user, product);
+                if (buyTransaction == null)
+                {
+                    DisplayInsufficientCash(user, product);
+                    continue;
+                }
+
+                DisplayUserBuysProduct(buyTransaction);
             }
 
+            Console.WriteLine("Thank you for using Quickbuy System. Have a great day!");
+            Close();
         }
     }
 }

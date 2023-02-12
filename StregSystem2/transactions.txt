@@ -134,3 +134,11 @@ Transaction ID: 396, User: massir5, Date: 12/31/2023 02:31:44, Amount: 500 | Typ
 Transaction ID: 674, User: massir5, Date: 12/32/2023 02:32:13, Amount: 5 | Type: Buy | Product: ID: 1, Name: Redbull, Price: 5
 Transaction ID: 696, User: massir6, Date: 12/32/2023 02:32:13, Amount: 5 | Type: Buy | Product: ID: 1, Name: Redbull, Price: 5
 Transaction ID: 696, User: massir5, Date: 12/32/2023 02:32:13, Amount: 500 | Type: Insert Cash
+Transaction ID: 603, User: ndavo, Date: 12/32/2023 05:32:00, Amount: 1200 | Type: Buy | Product: ID: 1837, Name: Monster, Price: 1200
+Transaction ID: 990, User: ndavo, Date: 12/33/2023 05:33:15, Amount: 1600 | Type: Buy | Product: ID: 16, Name: Cocio, Price: 1600
+Transaction ID: 597, User: ndavo, Date: 12/33/2023 05:33:59, Amount: 300 | Type: Buy | Product: ID: 32, Name: Kaffe/Choko(1 kop), Price: 300
+Transaction ID: 881, User: ndavo, Date: 12/34/2023 05:34:19, Amount: 300 | Type: Buy | Product: ID: 32, Name: Kaffe/Choko(1 kop), Price: 300
+Transaction ID: 143, User: ndavo, Date: 12/34/2023 05:34:23, Amount: 300 | Type: Buy | Product: ID: 32, Name: Kaffe/Choko(1 kop), Price: 300
+Transaction ID: 182, User: ndavo, Date: 12/34/2023 05:34:27, Amount: 300 | Type: Buy | Product: ID: 32, Name: Kaffe/Choko(1 kop), Price: 300
+Transaction ID: 831, User: ndavo, Date: 12/34/2023 05:34:42, Amount: 4500 | Type: Buy | Product: ID: 1778, Name: Feaster, Price: 4500
+Transaction ID: 643, User: jleve, Date: 12/38/2023 05:38:31, Amount: 1500 | Type: Buy | Product: ID: 1814, Name: Juice 1,5L, Price: 1500
