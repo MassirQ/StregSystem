@@ -1,0 +1,6 @@
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem2/bin/Debug/StregSystem2.exe
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem2/bin/Debug/StregSystem2.pdb
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem2/obj/Debug/StregSystem2.csproj.AssemblyReference.cache
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem2/obj/Debug/StregSystem2.csproj.CoreCompileInputs.cache
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem2/obj/Debug/StregSystem2.exe
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem2/obj/Debug/StregSystem2.pdb

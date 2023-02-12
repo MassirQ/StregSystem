@@ -1,0 +1,11 @@
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/bin/Debug/StregSystem.UnitTests.dll
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/bin/Debug/StregSystem.UnitTests.pdb
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/bin/Debug/nunit.framework.dll
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/bin/Debug/StregSystem2.exe
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/bin/Debug/StregSystem2.pdb
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/bin/Debug/nunit.framework.xml
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/obj/Debug/StregSystem.UnitTests.csproj.AssemblyReference.cache
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/obj/Debug/StregSystem.UnitTests.csproj.CoreCompileInputs.cache
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/obj/Debug/StregSystem.UnitTests.csproj.CopyComplete
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/obj/Debug/StregSystem.UnitTests.dll
+/Users/massirqauomi/RiderProjects/StregSystem2/StregSystem.UnitTests/obj/Debug/StregSystem.UnitTests.pdb
