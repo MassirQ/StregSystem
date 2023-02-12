@@ -12,13 +12,14 @@ namespace StregSystem2.View
     public class StregsystemCLI : IStregsystemUI
     {
         private readonly IStregsystem _stregsystem;
+        public event StregsystemEvent CommandEntered;
+
 
         public StregsystemCLI(IStregsystem stregsystem)
         {
             _stregsystem = stregsystem;
         }
 
-        public event StregsystemEvent CommandEntered;
 
         public void DisplayUserNotFound(string username)
         {
@@ -91,15 +92,19 @@ namespace StregSystem2.View
             Console.WriteLine("Please enter your username: ");
             var username = Console.ReadLine();
             var user = _stregsystem.GetUserByUserName(username);
-
-            if (user == null)
+            while (user == null)
             {
                 DisplayUserNotFound(username);
-                return;
+                username = Console.ReadLine();
+                user = _stregsystem.GetUserByUserName(username);
             }
+           
+           
+
+           
 
             DisplayUserInfo(user);
-
+          
             while (true)
             {
                 Console.WriteLine("Stregsystem CLI started!");

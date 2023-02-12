@@ -44,7 +44,7 @@ namespace StregSystem2.Model
        public abstract void Execute();
        public override string ToString()
         {
-            return $"Transaction ID: {_id}, User: {User.UserName}, Date: {_date.ToString("dd/mm/yyyy HH:mm:ss")}, Amount: {_amount}";
+            return $"Transaction ID: {_id}, User: {User.UserName}, Balance: {User.Balance},Date: {_date.ToString("dd/mm/yyyy HH:mm:ss")}, Amount: {_amount}";
         }
        
        

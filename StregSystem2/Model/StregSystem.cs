@@ -181,7 +181,7 @@ namespace StregSystem2.Model
             var user = _users.SingleOrDefault(u => u.UserName == username);
             if (user == null)
             {
-                throw new UserNotFoundException(username);
+                Console.WriteLine("Please control your username");
             }
 
             return user;
